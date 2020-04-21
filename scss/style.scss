@@ -1,0 +1,230 @@
+$primaryColor: #FFFFFF;
+$secondaryColor: #000000;
+$decoColor: #891818;
+$fontFamily:'Roboto','Microsoft JhengHei', 'sans-serif';
+
+@mixin fontH1 {
+    font-size: 80px;
+    line-height: 94px;
+    font-weight: 900;
+    color: $primaryColor;
+}
+
+@mixin fontL {
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 500;
+}
+
+@mixin fontM {
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 500;
+}
+
+@mixin fontS {
+    font-size: 20px;
+    line-height: 42px;
+    font-weight: 500;
+}
+
+*{
+    font-family: $fontFamily !important;
+    font-style: italic !important;
+}
+
+a{
+    display: block;
+    cursor: pointer;
+}
+
+img{
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    @include fontL;
+}
+
+.header{
+    background: url(../images/banner_1920x960.png) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 64px; 
+}
+.headerIntro{
+    margin-top: 70px;
+    span{
+    @include fontM;
+    font-weight: 700;
+    color: $primaryColor;
+    }
+    h1{
+        @include fontH1;
+        margin-bottom: 32px;
+    }
+    p{
+        @include fontM;
+        font-weight: 700;
+        color: $primaryColor;
+        margin-bottom: 64px;
+    }  
+    .headerIcon{
+        width: 288px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+
+
+.about{
+    .title{
+        color: $secondaryColor;
+        margin-bottom: 40px;
+    }
+
+    img{
+        margin-bottom: 24px;
+    }
+}
+.aboutIntro{
+    @include fontM;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.aboutEdu{
+    @include fontM;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.aboutList{
+    position: relative;
+    width: 384px;
+    border-top: 1px solid $secondaryColor;
+    padding-top: 34px;
+    margin-bottom: 56px;
+    .aboutListItem {
+        @include fontM;
+        font-weight: 700;
+        margin-bottom: 32px;
+        text-align: center;
+        padding-left: 20px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background-color: $decoColor;
+            border-radius: 50%;
+            margin-top: 9px;  
+            left: 30px;            
+        }
+        &:nth-child(1):before{
+            left: 20px; 
+        }
+        &:nth-child(2):before{
+            left: 70px; 
+        }
+        &:nth-child(3):before{
+            left: 10px; 
+        }
+
+    }
+}
+
+
+
+
+.brand{
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    padding-top: 64px;
+    margin-bottom: 64px;
+    .title{
+        margin-bottom: 16px;
+    }
+    span{
+        @include fontM;
+        margin-bottom: 32px;
+    }
+    .brandIntro{
+        @include fontS;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+    img{
+        margin-bottom: 40px;
+    }
+    .brandPics{
+        display: flex;
+        margin-bottom: 120px;
+        li:nth-child(1){
+            margin-right: 24px;
+        }
+    }
+
+}
+
+.works{
+    background: url(../images/worksBG_1921x1588.png) no-repeat;
+    // background-size: cover;
+    background-position: center bottom;
+    text-align: center;
+    .title{
+        margin-bottom: 24px;
+    }
+    .worksSubtitle{
+        margin-bottom: 48px;
+    }
+    p{
+        @include fontS;
+    }
+}
+
+.worksIntro{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 104px;
+    li{
+        margin-bottom: 56px;
+        img{
+            margin-bottom: 16px;
+        }
+        p{
+            color: $primaryColor;
+        }
+    }
+}
+    
+
+.footer{
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    text-align: center;
+    padding: 64px 0;
+    .title{
+        margin-bottom: 16px;
+    }
+    li{
+        @include fontM;
+        margin-bottom: 16px;
+    }
+}
+
+
+
+
