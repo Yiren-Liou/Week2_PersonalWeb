@@ -12,7 +12,7 @@ img {
   display: block;
 }
 
-.container {
+.dFlex {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,6 @@ img {
   margin-bottom: 64px;
 }
 .headerIntro .headerIcon {
-  width: 288px;
   display: flex;
   justify-content: space-around;
 }
@@ -70,16 +69,14 @@ img {
 .about img {
   margin-bottom: 24px;
 }
-
-.aboutIntro {
+.about .aboutIntro {
   font-size: 24px;
   line-height: 42px;
   font-weight: 500;
   font-weight: 700;
   margin-bottom: 8px;
 }
-
-.aboutEdu {
+.about .aboutEdu {
   font-size: 24px;
   line-height: 42px;
   font-weight: 500;
@@ -88,15 +85,13 @@ img {
   text-align: center;
   margin-bottom: 32px;
 }
-
-.aboutList {
+.about .aboutList {
   position: relative;
-  width: 384px;
   border-top: 1px solid #000000;
   padding-top: 34px;
   margin-bottom: 56px;
 }
-.aboutList .aboutListItem {
+.about .aboutList .aboutListItem {
   font-size: 24px;
   line-height: 42px;
   font-weight: 500;
@@ -105,7 +100,7 @@ img {
   text-align: center;
   padding-left: 20px;
 }
-.aboutList .aboutListItem:before {
+.about .aboutList .aboutListItem:before {
   content: "";
   position: absolute;
   width: 22px;
@@ -113,16 +108,13 @@ img {
   background-color: #891818;
   border-radius: 50%;
   margin-top: 9px;
-  left: 30px;
+  left: -5px;
 }
-.aboutList .aboutListItem:nth-child(1):before {
-  left: 20px;
+.about .aboutList .aboutListItem:nth-child(2):before {
+  left: 40px;
 }
-.aboutList .aboutListItem:nth-child(2):before {
-  left: 70px;
-}
-.aboutList .aboutListItem:nth-child(3):before {
-  left: 10px;
+.about .aboutList .aboutListItem:nth-child(3):before {
+  left: -20px;
 }
 
 .brand {
@@ -159,37 +151,41 @@ img {
 }
 
 .works {
-  background: url(../images/worksBG_1921x1588.png) no-repeat;
-  background-position: center bottom;
   text-align: center;
 }
 .works .title {
   margin-bottom: 24px;
 }
 .works .worksSubtitle {
-  margin-bottom: 48px;
-}
-.works p {
   font-size: 20px;
   line-height: 42px;
   font-weight: 500;
+  margin-bottom: 128px;
 }
-
-.worksIntro {
+.works .workList {
+  background: url(../images/worksBG_1921x1588.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 104px;
+}
+.works .workList .worksIntro {
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   justify-content: space-between;
-  margin-bottom: 104px;
-}
-.worksIntro li {
   margin-bottom: 56px;
 }
-.worksIntro li img {
+.works .workList .worksIntro:nth-child(1) {
+  margin-top: -80px;
+}
+.works .workList .worksIntro li img {
   margin-bottom: 16px;
 }
-.worksIntro li p {
+.works .workList .worksIntro li p {
+  font-size: 20px;
+  line-height: 42px;
+  font-weight: 500;
   color: #FFFFFF;
 }
 
